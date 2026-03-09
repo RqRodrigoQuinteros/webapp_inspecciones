@@ -1,0 +1,123 @@
+/* Estilos base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.screen.active {
+  display: block;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #28a745;
+}
+
+#status-dot.offline {
+  background-color: #6c757d;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.5; }
+}
+
+/* Login */
+#login-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#dni-input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 200px;
+}
+
+#login-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dashboard */
+#stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+#inspections-list {
+  list-style: none;
+  padding: 0;
+}
+
+#inspections-list li {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+/* Form */
+#inspection-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-si, .btn-no {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-si {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-no {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Mobile-first */
+@media (max-width: 600px) {
+  .screen {
+    padding: 10px;
+  }
+}
