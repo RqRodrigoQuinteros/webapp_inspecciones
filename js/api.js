@@ -1,4 +1,4 @@
-const API_URL = 'TU_WEB_APP_URL_AQUI'; // Reemplaza con la URL del Web App de Apps Script
+const API_URL = 'https://script.google.com/macros/s/AKfycbwEi5IMR2l3_MBwhH3KmlD-_fSOyUJSmhhi1fzMNYuCcZjk0mi5xr_FurwQ9Gp6mnRd/exec'; // Reemplaza con la URL del Web App de Apps Script
 
 async function login(dni) {
   const response = await fetch(`${API_URL}?action=login&dni=${dni}`);
